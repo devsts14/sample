@@ -20,7 +20,6 @@ const Filehistory = () => {
     console.log("Connect");
     connect();
   }, []);
-  // new commit
   // Effect will only work once the data in the array has been modified
   useEffect(() => {
     selectedproject && fetchRepo();
