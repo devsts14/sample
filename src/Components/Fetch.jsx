@@ -18,15 +18,15 @@ const Fetch = ({history}) => {
           <span className="box-1"><i class="fas fa-folder"></i></span>
           <span className="box-2">Project</span>
         </div>
-        <div className="box">
+        <div onClick={()=>{history.push('/fetch/repository')}} className="box">
           <span className="box-1"><i class="fas fa-code"></i></span>
           <span className="box-2"> Repository</span>
         </div>
-        <div className="box">
+        <div onClick={()=>{history.push('/fetch/file-history')}} className="box">
           <span className="box-1"><i class="fas fa-history"></i></span>
           <span className="box-2"> File history</span>
         </div>
-        <div className="box">
+        {/* <div className="box">
           <span className="box-1"><i class="fas fa-file"></i></span>
           <span className="box-2"> File content</span>
         </div>
@@ -37,7 +37,7 @@ const Fetch = ({history}) => {
         <div className="box">
           <span className="box-1"><i class="fas fa-key"></i></span>
           <span className="box-2"> Repository Key</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

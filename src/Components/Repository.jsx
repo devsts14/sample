@@ -3,17 +3,17 @@ import { Breadcrumb } from "antd";
 import {Link} from 'react-router-dom'
 import axios from "axios";
 
-const Project = () => {
+const Repository = () => {
     const [project,setProject] = useState([])
     useEffect(() => {
         connect()
     },[]);
 
     const connect = async () => {
-        await axios.get('http://localhost:8080/bitbucket/get-projects')
+        await axios.get('http://localhost:8080/bitbucket/totalRepo')
             .then((res) => {
                 console.log(res,"response")
-                setProject(res.data.values)
+                setProject(res.data[0].values)
             });
     }
 
@@ -26,7 +26,7 @@ const Project = () => {
               <Link to="/fetch">Fetch</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link to="/fetch/project">Project</Link>
+              <Link to="/fetch/repository">Repository</Link>
             </Breadcrumb.Item>
           </Breadcrumb>
           </div>
@@ -40,4 +40,4 @@ const Project = () => {
     )
 }
 
-export default Project
+export default Repository
