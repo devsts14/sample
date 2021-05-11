@@ -17,9 +17,10 @@ const Filehistory = () => {
   const [selectedFile, setSelectedFile] = useState("");
 
   useEffect(() => {
+    console.log("Connect");
     connect();
   }, []);
-
+  // new commit
   // Effect will only work once the data in the array has been modified
   useEffect(() => {
     selectedproject && fetchRepo();
